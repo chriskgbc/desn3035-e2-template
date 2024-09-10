@@ -1,18 +1,10 @@
 "use client"
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function Page() {
 
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        if (window !== undefined) {
-            setIsClient(true)
-        }
-    }, [])
-    
-    return (isClient ? <>
+    return <>
         <h1>Hello, Next.js!</h1>
-    </> : <></>)
+    </>
 }
